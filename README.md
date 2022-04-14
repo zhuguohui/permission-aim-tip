@@ -97,3 +97,17 @@ public class MyApp  extends Application {
 | showPermissionName       | 用于显示给用户看的权限名称                                   |
 | permissionAimDescription | 权限目的的描述                                               |
 
+## Activity中使用
+
+需要如下使用才能拦截
+
+```java
+  ActivityCompat.requestPermissions(this, locationPermission, 100);
+```
+
+其中的ActivityCompat是Android本身的适配库
+
+![image-20220414175251163](README.assets/image-20220414175251163.png)
+
+# gradle 集成
+
