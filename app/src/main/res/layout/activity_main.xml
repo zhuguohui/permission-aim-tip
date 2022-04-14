@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:onClick="requestPermissionByCompat"
+        android:text="使用ActivityCompat申请定位权限" />
+
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:onClick="requestPermissionByRx"
+        android:text="使用RxPermission 申请读写权限" />
+
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_3"
+        android:background="#888" />
+
+</RelativeLayout>
