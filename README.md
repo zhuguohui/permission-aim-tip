@@ -14,7 +14,7 @@
 
 
 
-<img src="README.assets/demo.gif" alt="QQ视频20220414171801_"  />
+<img src="README.assets/demo.gif" alt="QQ视频20220414171801_" style="zoom: 70%;" />
 
 # 特点
 
