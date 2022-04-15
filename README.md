@@ -6,6 +6,31 @@
 
 因为越来越严格的隐私政策要求，需要在申请权限的时候，告知用户需要该权限的目的。为了能快速适配已有项目，需要一个能自动感知权限申请，并显示的原因的框架。于是编写了该框架。
 
+# gradle 引入
+
+在项目根目录的build.gradle文件中配置研发中心的maven
+
+```groovy
+allprojects {
+    repositories {
+        google()
+        jcenter()
+     
+        //研发中心的maven库
+        maven {url 'http://mvn.devdemo.trs.net.cn/repository/maven-public/'}
+    }
+}
+
+```
+
+在需要使用的moudle中引入
+
+```groovy
+  	//权限用途提醒库
+    api 'com.trs.app:permission-aim-tip:1.0.8'
+
+```
+
 
 
 # 效果
@@ -39,11 +64,25 @@ public class MyApp  extends Application {
     public void onCreate() {
         super.onCreate();
         //注册代理，一句话即可使用
-        PermissionAimTipDelegate.initPermissionTip(new TRSTipShowController
+         PermissionAimTipHelper.init(new TRSTipShowController
                 (new RawAimTipAdapter(this, R.raw.permission_aim_description)));
     }
 }
 ```
+
+## 类说明
+
+1. 1. | 类名                     | 作用                                                         | 备注                                                         |
+      | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+      | PermissionAimTipHelper   | 核心类，用于拦截通过ActivityCompat调用权限的过程，唯一构造参数为**AimTipShowController** | 必须调用init方法，之后才能通过getInstance获取实例。否则会报错。 |
+      | **AimTipShowController** | 接口，在拦截到权限请求的时候，通过该类来显示提示信息。       |                                                              |
+      | TRSTipShowController     | AimTipShowController的实现类，需要两个构造参数,其中之一是**AimTipAdapter**，通过AimTipAdapter将用户申请的权限转换为可以显示的语义化文字。还有一个是**DialogStyleData** 可以指定dialog的样式，可以缺省。 |                                                              |
+      | **AimTipAdapter**        | 抽象类，定义了从android权限到需要显示信息的抽象过程          |                                                              |
+      | RawAimTipAdapter         | AimTipAdapter的实现类，实现了加载raw目录下的配置文件         |                                                              |
+      | DialogStyleData          | 用来保存dialog的布局文件id，和item的布局文件id ，以此来实现样式的自定义 |                                                              |
+      |                          |                                                              |                                                              |
+
+      
 
 
 
@@ -97,9 +136,9 @@ public class MyApp  extends Application {
 | showPermissionName       | 用于显示给用户看的权限名称                                   |
 | permissionAimDescription | 权限目的的描述                                               |
 
-## Activity中使用
+## Activity中使用 
 
-需要如下使用才能拦截
+**直接使用Activity的requestPermissions方法**，将无法拦截。需要使用以下方式请求权限才能拦截
 
 ```java
   ActivityCompat.requestPermissions(this, locationPermission, 100);
@@ -109,5 +148,31 @@ public class MyApp  extends Application {
 
 ![image-20220414175251163](README.assets/image-20220414175251163.png)
 
-# gradle 集成
+## 样式自定义
 
+原理是通过指定布局ID来替换样式，只需要在布局ID中出现以下控件即可。
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--用来获取recycleView的id,控件必须是RecycleView-->
+    <item name="aim_tip_id_recycle_view" type="id"/>
+    <!--在item布局中用于显示权限名称,控件必须是TextView-->
+    <item name="aim_tip_id_item_title" type="id"/>
+    <!--在item布局中用于显示权限的目的,控件必须是TextView-->
+    <item name="aim_tip_id_item_content" type="id"/>
+</resources>
+```
+
+设置样式
+
+```java
+
+    DialogStyleData dialogStyleData = new DialogStyleData(R.layout.custom_dialog, DialogStyleData.USE_DEFAULT_STYLE);
+                //修改样式
+                PermissionAimTipHelper.getInstance().setShowController(new TRSTipShowController(new RawAimTipAdapter(v.getContext(), R.raw.permission_aim_description), dialogStyleData));yleData));
+```
+
+
+
+# 
