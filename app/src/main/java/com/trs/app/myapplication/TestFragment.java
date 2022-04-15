@@ -51,12 +51,7 @@ public class TestFragment extends Fragment {
             public void onClick(View v) {
                 DialogStyleData dialogStyleData = new DialogStyleData(R.layout.custom_dialog, DialogStyleData.USE_DEFAULT_STYLE);
                 //修改样式
-                PermissionAimTipHelper
-                        .getInstance()
-                        .setShowController(new TRSTipShowController(
-                                new RawAimTipAdapter(v.getContext(),
-                                        R.raw.permission_aim_description),
-                                        dialogStyleData));
+                PermissionAimTipHelper.getInstance().setShowController(new TRSTipShowController(new RawAimTipAdapter(v.getContext(), R.raw.permission_aim_description), dialogStyleData));
 
                 requestPermissions(permissions2, 456);
             }
