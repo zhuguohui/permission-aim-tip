@@ -22,10 +22,10 @@ public class DialogStyleData {
     public DialogStyleData(int dialogLayoutId, int itemLayoutId) {
 
         if(dialogLayoutId==USE_DEFAULT_STYLE){
-            dialogLayoutId =R.layout.dialog_permissions_aim;
+            dialogLayoutId =R.layout.permission_aim_dialog;
         }
         if(itemLayoutId==USE_DEFAULT_STYLE){
-            itemLayoutId=R.layout.item_dialog_permissions_aim;
+            itemLayoutId=R.layout.permission_aim_dialog_item;
         }
         this.dialogLayoutId = dialogLayoutId;
         this.itemLayoutId = itemLayoutId;

@@ -69,10 +69,7 @@ public class PermissionsAimDescribeDialog extends DialogFragment {
         });
     }
 
-    @Override
-    public void onDismiss(DialogInterface dialog) {
-        if (getParentFragmentManager() != null) super.dismiss();
-    }
+
 
     class AimDescribeAdapter extends RecyclerView.Adapter<aimDescribeViewHolder> {
         private List<AimData> itemDataList;
