@@ -27,6 +27,8 @@
         android:onClick="requestPermissionByRx"
         android:text="使用RxPermission 申请读写权限" />
 
+
+
     <FrameLayout
         android:id="@+id/fragment_content"
         android:layout_marginTop="10dp"

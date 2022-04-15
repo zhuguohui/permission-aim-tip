@@ -13,7 +13,7 @@
     android:paddingBottom="20dp">
 
     <TextView
-        android:id="@+id/tv_permissions_title"
+        android:id="@+id/aim_tip_id_item_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -24,7 +24,7 @@
         tools:text="标题必填" />
 
     <TextView
-        android:id="@+id/tv_permissions_aim"
+        android:id="@+id/aim_tip_id_item_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#B8B6B6"

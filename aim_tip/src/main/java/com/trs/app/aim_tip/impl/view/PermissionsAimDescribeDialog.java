@@ -44,7 +44,7 @@ public class PermissionsAimDescribeDialog extends DialogFragment {
         super.onStart();
     }
 
-    public void setOnDismisLister(onDismissListener onDismissListener) {
+    public void setOnDismissLister(onDismissListener onDismissListener) {
         this.onDismissListener = onDismissListener;
     }
 
@@ -53,7 +53,7 @@ public class PermissionsAimDescribeDialog extends DialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         getDialog().getWindow().getDecorView().setPadding(0, 0, 0, 0);
-        View view = LayoutInflater.from(context).inflate(dialogStyleData.getLayoutId(), container, false);
+        View view = LayoutInflater.from(context).inflate(dialogStyleData.getDialogLayoutId(), container, false);
         return view;
     }
 
@@ -63,7 +63,7 @@ public class PermissionsAimDescribeDialog extends DialogFragment {
         RecyclerView recyclerView = view.findViewById(R.id.dialog_rv);
         recyclerView.setAdapter(new AimDescribeAdapter(data));
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        view.findViewById(R.id.dialog_tv).setOnClickListener(v -> {
+        view.findViewById(R.id.aim_tip_id_recycle_view).setOnClickListener(v -> {
             this.dismiss();
             if (onDismissListener != null) onDismissListener.onAction();
         });
@@ -107,8 +107,8 @@ public class PermissionsAimDescribeDialog extends DialogFragment {
 
         public aimDescribeViewHolder(View itemView) {
             super(itemView);
-            permissionsTitle = itemView.findViewById(R.id.tv_permissions_title);
-            permissionsAim = itemView.findViewById(R.id.tv_permissions_aim);
+            permissionsTitle = itemView.findViewById(R.id.aim_tip_id_item_title);
+            permissionsAim = itemView.findViewById(R.id.aim_tip_id_item_content);
         }
     }
 

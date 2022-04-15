@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--用来获取recycleView的id,控件必须是RecycleView-->
+    <item name="aim_tip_id_recycle_view" type="id"/>
+    <!--在item布局中用于显示权限名称,控件必须是TextView-->
+    <item name="aim_tip_id_item_title" type="id"/>
+    <!--在item布局中用于显示权限的目的,控件必须是TextView-->
+    <item name="aim_tip_id_item_content" type="id"/>
+</resources>

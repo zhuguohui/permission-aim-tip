@@ -48,7 +48,7 @@ public class TRSTipShowController implements AimTipShowController {
             if (!aims.isEmpty()) {
                 PermissionsAimDescribeDialog dialog = new PermissionsAimDescribeDialog(activity, aims,dialogStyleData);
                 dialog.setCancelable(false);
-                dialog.setOnDismisLister(showAction::onShowComplete);
+                dialog.setOnDismissLister(showAction::onShowComplete);
                 dialog.show(fragmentActivity.getSupportFragmentManager(), "top");
                 return;
             }

@@ -28,6 +28,13 @@
     ],
     "showPermissionName": "录音功能",
     "permissionAimDescription": "通过手机和耳机的麦克 用于录音、语音检索等场景"
+  },
+  {
+    "androidPermissionNames": [
+      "android.permission.READ_CONTACTS"
+    ],
+    "showPermissionName": "读取联系人",
+    "permissionAimDescription": "测试功能"
   }
 
 ]

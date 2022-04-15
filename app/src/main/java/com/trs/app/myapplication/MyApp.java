@@ -2,7 +2,7 @@ package com.trs.app.myapplication;
 
 import android.app.Application;
 
-import com.trs.app.aim_tip.PermissionAimTipDelegate;
+import com.trs.app.aim_tip.PermissionAimTipHelper;
 import com.trs.app.aim_tip.impl.TRSTipShowController;
 import com.trs.app.aim_tip.impl.adatper.RawAimTipAdapter;
 
@@ -17,7 +17,7 @@ public class MyApp  extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        PermissionAimTipDelegate.initPermissionTip(new TRSTipShowController
+        PermissionAimTipHelper.init(new TRSTipShowController
                 (new RawAimTipAdapter(this, R.raw.permission_aim_description)));
     }
 }

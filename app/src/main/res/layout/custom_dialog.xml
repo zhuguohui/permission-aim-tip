@@ -22,8 +22,8 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="权限申请目的说明"
-            android:textColor="#000"
-            android:textSize="18dp"
+            android:textColor="#00f"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="15dp"
-            android:background="@drawable/bg_shape_corner_14px_color_primary"
+            android:background="@drawable/bg_shape_blue"
             android:gravity="center"
             android:padding="10dp"
             android:text="好的"

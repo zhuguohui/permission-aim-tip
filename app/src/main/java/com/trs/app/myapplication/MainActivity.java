@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.tbruyelle.rxpermissions2.RxPermissions;
@@ -13,7 +14,7 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 import io.reactivex.disposables.Disposable;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
     public static String[] locationPermission = {
             Manifest.permission.ACCESS_FINE_LOCATION,
@@ -25,6 +26,8 @@ public class MainActivity extends BaseActivity {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
     };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,4 +54,6 @@ public class MainActivity extends BaseActivity {
 
                 });
     }
+
+
 }
