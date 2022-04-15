@@ -175,4 +175,10 @@ public class MyApp  extends Application {
 
 
 
-# 
+# 运行Demo
+
+更多使用细节请参考这个项目，这是一个Demo项目。可以运行，如果提示gradle变量找不到，直接注释即可。这些代码是用来上传maven的。和demo运行无关。
+
+
+
+![image-20220415170241614](README.assets/image-20220415170241614.png)
