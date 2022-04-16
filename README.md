@@ -6,31 +6,6 @@
 
 因为越来越严格的隐私政策要求，需要在申请权限的时候，告知用户需要该权限的目的。为了能快速适配已有项目，需要一个能自动感知权限申请，并显示的原因的框架。于是编写了该框架。
 
-# gradle 引入
-
-在项目根目录的build.gradle文件中配置研发中心的maven
-
-```groovy
-allprojects {
-    repositories {
-        google()
-        jcenter()
-     
-        //研发中心的maven库
-        maven {url 'http://mvn.devdemo.trs.net.cn/repository/maven-public/'}
-    }
-}
-
-```
-
-在需要使用的moudle中引入
-
-```groovy
-  	//权限用途提醒库
-    api 'com.trs.app:permission-aim-tip:1.0.8'
-
-```
-
 
 
 # 效果
@@ -177,8 +152,6 @@ public class MyApp  extends Application {
 
 # 运行Demo
 
-更多使用细节请参考这个项目，这是一个Demo项目。可以运行，如果提示gradle变量找不到，直接注释即可。这些代码是用来上传maven的。和demo运行无关。
+更多使用细节请参考这个项目，这是一个Demo项目。
 
 
-
-![image-20220415170241614](README.assets/image-20220415170241614.png)
