@@ -47,7 +47,15 @@ allprojects {
 
 ```groovy
   	//权限用途提醒库 support版本
-    api 'com.trs.app:permission-aim-tip-support:1.0.9'
+    api 'com.trs.app:permission-aim-tip-support:1.1.0'
+```
+
+
+
+自定义版本的rxpermission，使用**ActivityCompat**来获取权限，包名是**com.tbruyelle.rxpermissions2.RxPermissions**可以和网上的rxpermission无缝替换。
+
+```groovy
+    implementation 'com.trs.app:rxpermission:1.0.0'
 ```
 
 
