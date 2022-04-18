@@ -37,6 +37,6 @@ dependencies {
 
     implementation project(path: ':aim_tip')
 
-
+    implementation 'com.trs.app:rxpermission:1.0.0'
 
 }

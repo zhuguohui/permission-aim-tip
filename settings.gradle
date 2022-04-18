@@ -4,6 +4,11 @@ pluginManagement {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
+        //研发中心的maven库
+        maven {
+            allowInsecureProtocol = true
+            url 'http://mvn.devdemo.trs.net.cn/repository/maven-public/'
+        }
     }
 }
 dependencyResolutionManagement {
@@ -12,6 +17,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
+        //研发中心的maven库
+        maven {
+            allowInsecureProtocol = true
+            url 'http://mvn.devdemo.trs.net.cn/repository/maven-public/'
+        }
     }
 }
 rootProject.name = "权限用途提示库"
