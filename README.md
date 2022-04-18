@@ -58,6 +58,28 @@ allprojects {
     implementation 'com.trs.app:rxpermission:1.0.0'
 ```
 
+ 这个库的包名是**com.tbruyelle.rxpermissions.RxPermissions** 如果项目中用到的是**com.tbruyelle.rxpermissions2.RxPermissions**
+
+可以使用Android Studio的全局替换功能
+
+
+
+![image-20220418171336488](README.assets/image-20220418171336488.png)
+
+填入如下参数即可
+
+![image-20220418171410428](README.assets/image-20220418171410428.png)
+
+
+
+替换的参数
+
+```
+import com.tbruyelle.rxpermissions2.RxPermissions;
+
+import com.tbruyelle.rxpermissions.RxPermissions;
+```
+
 
 
 # 效果
