@@ -36,7 +36,7 @@ task generateSourcesJar(type: Jar) {
     classifier 'sources'
 }
 
-def versionName = "1.0.9"
+def versionName = "1.1.0"
 
 afterEvaluate {
     publishing {
