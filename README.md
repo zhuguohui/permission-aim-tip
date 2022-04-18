@@ -1,5 +1,11 @@
 
 
+
+
+
+
+
+
 # Permission_aim_tip
 
 # 作用
@@ -23,12 +29,25 @@ allprojects {
 
 ```
 
-在需要使用的moudle中引入
+在需要使用的moudle中引入 
+
+## android X
+
+
 
 ```groovy
   	//权限用途提醒库
     api 'com.trs.app:permission-aim-tip:1.0.8'
 
+```
+
+## support
+
+
+
+```groovy
+  	//权限用途提醒库 support版本
+    api 'com.trs.app:permission-aim-tip-support:1.0.8'
 ```
 
 
