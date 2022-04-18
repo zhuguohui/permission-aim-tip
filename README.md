@@ -43,11 +43,11 @@ allprojects {
 
 ## support
 
-
+**注意在support版本中，使用了自定义的rxpermission,如果和项目已有的rxpermission冲突，删除项目中的gradle引入即可**
 
 ```groovy
   	//权限用途提醒库 support版本
-    api 'com.trs.app:permission-aim-tip-support:1.0.8'
+    api 'com.trs.app:permission-aim-tip-support:1.0.9'
 ```
 
 
