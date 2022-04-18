@@ -36,7 +36,7 @@
             android:textColor="#737272"
             android:textSize="16dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
+        <android.support.v7.widget.RecyclerView
             android:id="@+id/dialog_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

@@ -3,6 +3,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 dependencyResolutionManagement {
@@ -16,3 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "权限用途提示库"
 include ':app'
 include ':aim_tip'
+include ':rxpermission'

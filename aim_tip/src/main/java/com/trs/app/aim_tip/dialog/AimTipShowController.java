@@ -1,8 +1,8 @@
 package com.trs.app.aim_tip.dialog;
 
 import android.app.Activity;
+import android.support.annotation.NonNull;
 
-import androidx.annotation.NonNull;
 
 /**
  * Created by zhuguohui
@@ -11,5 +11,5 @@ import androidx.annotation.NonNull;
  * Desc:用来控制dialog的显示
  */
 public interface AimTipShowController {
-    void showTipDialog(@NonNull Activity activity, @NonNull String[] permissions, int requestCode,ShowAction showAction);
+    void showTipDialog(@NonNull Activity activity, @NonNull String[] permissions, int requestCode, ShowAction showAction);
 }

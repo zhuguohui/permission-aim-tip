@@ -1,9 +1,8 @@
 package com.trs.app.aim_tip.impl;
 
 import android.app.Activity;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
+import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 
 
 import com.trs.app.aim_tip.adapter.AimTipAdapter;

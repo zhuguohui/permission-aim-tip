@@ -3,15 +3,14 @@ package com.trs.app.myapplication;
 import android.Manifest;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-import com.tbruyelle.rxpermissions2.RxPermissions;
+import com.tbruyelle.rxpermissions.RxPermissions;
 
-import io.reactivex.disposables.Disposable;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void requestPermissionByRx(View view) {
         RxPermissions rxPermissions = new RxPermissions(this);
-        Disposable subscribe = rxPermissions.request(storePermission)
+        rx.Subscription subscribe = rxPermissions.request(storePermission)
                 .subscribe(get -> {
 
                 });
